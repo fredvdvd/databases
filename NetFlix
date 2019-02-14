@@ -32,8 +32,14 @@ AS sub_16
 INNER JOIN Programma ON TijdDuur = sub_16.Longest;
 
 --Geef de accounts met slechts 1 profiel.
-SELECT DISTINCT Abonnement.Naam FROM Abonnement
-INNER JOIN Profiel ON Profiel.UserName = Abonnement.UserName;
+SELECT DISTINCT Abonnement.UserName 
+FROM Abonnement 
+INNER JOIN Profiel ON Profiel.UserName = Abonnement.UserName
+WHERE Abonnement.UserName in (
+				   SELECT UserName
+                   FROM Profiel
+                   GROUP BY UserName
+                   HAVING COUNT(Username) = 2);
 
 --Voor een door de gebruiker geselecteerde film, hoeveel kijkers hebben deze in z’n geheel bekeken?
 SELECT Count(UserName) FROM Film
