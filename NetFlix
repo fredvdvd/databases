@@ -46,3 +46,24 @@ SELECT Count(UserName) FROM Film
 JOIN KijkGedrag ON Film.Id = KijkGedrag.Id
 JOIN Programma ON Programma.Id = Film.Id
 WHERE Percentage = '100' AND Programma.Titel='Pulp Fiction';
+
+--	Voor een door de gebruiker geselecteerde serie, 
+-- geef het gemiddeld bekeken % van de tijdsduur van die serie als geheel (d.w.z. alle afleveringen van die serie).
+SELECT 
+	AVG(coalesce(Percentage,0)) as AvgPerc
+FROM KijkGedrag 
+RIGHT JOIN Aflevering ON Aflevering.Id = KijkGedrag.Id
+FULL JOIN Programma ON Programma.Id = KijkGedrag.Id
+WHERE Stitel = 'Sherlock' ;
+
+-- Voor een door de gebruiker geselecteerde film, hoeveel procent van de kijkers hebben deze in z’n geheel bekeken? 
+-- Geeft hierbij ook het absolute aantal kijkers dat deze film helemaal afkeek en het totaal aantal kijkers.
+SELECT 
+	Count(UserName) As Total,
+	Count(CASE WHEN KijkGedrag.Percentage = '100' THEN UserName END) FullViewers,
+	CAST(Round(COUNT(CASE WHEN KijkGedrag.Percentage = '100' THEN UserName END)*1.00/Count(UserName),2)AS DECIMAL (3,2)) Percentage
+FROM Film 
+JOIN KijkGedrag ON Film.Id = KijkGedrag.Id
+JOIN Programma ON Programma.Id = Film.Id
+WHERE (Programma.Titel='Pulp Fiction')
+;
