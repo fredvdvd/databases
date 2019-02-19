@@ -47,6 +47,9 @@
     <Compile Include="Exercise1Model.cs" />
     <Compile Include="Exercise2Model.cs" />
     <Compile Include="Exercise3Model.cs" />
+    <Compile Include="Exercise4Model.cs" />
+    <Compile Include="Exercise5Model.cs" />
+    <Compile Include="Exercise6Model.cs" />
     <Compile Include="ExercisesQueries.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

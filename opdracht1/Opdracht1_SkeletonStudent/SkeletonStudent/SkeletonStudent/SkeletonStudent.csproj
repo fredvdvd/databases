@@ -74,6 +74,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Exercises\Exercise4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Exercises\Exercise5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Exercises\Exercise6.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -93,6 +105,15 @@
     </Compile>
     <Compile Include="Exercises\Exercise3.xaml.cs">
       <DependentUpon>Exercise3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Exercises\Exercise4.xaml.cs">
+      <DependentUpon>Exercise4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Exercises\Exercise5.xaml.cs">
+      <DependentUpon>Exercise5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Exercises\Exercise6.xaml.cs">
+      <DependentUpon>Exercise6.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>

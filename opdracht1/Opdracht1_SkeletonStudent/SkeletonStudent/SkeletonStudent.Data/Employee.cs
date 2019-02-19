@@ -16,10 +16,10 @@ namespace SkeletonStudent.Data
 
         public void Load(SqlDataReader reader)
         {
-            FirstName = reader.GetString(reader.GetOrdinal("firstname"));
-            LastName = reader.GetString(reader.GetOrdinal("lastName"));
-            DepartmentId = reader.GetInt32(reader.GetOrdinal("departmendId"));
-            EmployeeId = reader.GetInt32(reader.GetOrdinal("employeeId"));
+            FirstName = reader.GetString(reader.GetOrdinal("first_name"));
+            LastName = reader.GetString(reader.GetOrdinal("last_name"));
+            DepartmentId = reader.GetInt32(reader.GetOrdinal("department_id"));
+            EmployeeId = reader.GetInt32(reader.GetOrdinal("employee_id"));
         }
     }
 }

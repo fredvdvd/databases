@@ -15,7 +15,7 @@ namespace SkeletonStudent.Data
 
             SqlConnection connection = CompanyDB.GetConnection();
             connection.Open();
-            string query = "SELECT firstname, lastName, departmendId, employeeId FROM Employee";
+            string query = "SELECT first_name, last_name, department_id, employee_id FROM Employees";
             SqlCommand cmd = new SqlCommand(query, connection);
             SqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
@@ -31,9 +31,29 @@ namespace SkeletonStudent.Data
 
         public static IList<Employee> GetEmployeesByName(string nameToSearch)
         {
-            // Implementeer hier een search functie voor employees op naam
-            // gebruik een input parameter!
-            return null;
+            var employees = new List<Employee>();
+
+            SqlConnection connection = CompanyDB.GetConnection();
+            connection.Open();
+            string query =
+                @"SELECT first_name, last_name, department_id, employee_id 
+                FROM Employees
+                WHERE first_name like @nameToSearch 
+                OR last_name like @nameToSearch";
+
+            SqlCommand cmd = new SqlCommand(query, connection);
+            cmd.Parameters.AddWithValue("@nameToSearch", "%" + nameToSearch + "%");
+
+            SqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                Employee empl = new Employee();
+                empl.Load(reader);
+                employees.Add(empl);
+            }
+
+            return employees;
         }
+
     }
 }

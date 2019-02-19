@@ -31,12 +31,16 @@
                Click="SelectExercise2_Click"/>
             <Button Name="Exe3Button" Content="jobs greater 10000" Style="{StaticResource navigationButtonStyle}"  
                Click="SelectExercise3_Click"/>
-
         </StackPanel>
         <StackPanel Grid.Column="1">
-            <Button Name="Exe4Button" Content="jobs greater 10000" Style="{StaticResource navigationButtonStyle}"  
-               Click="SelectExercise3_Click"/>
-            <!--Hier komen de overige buttons-->
+            <Button Name="Exe4Button" Content="employee s manager" Style="{StaticResource navigationButtonStyle}"  
+               Click="SelectExercise4_Click"/>
+            <Button Name="Exe5Button" Content="employee  per department" Style="{StaticResource navigationButtonStyle}"  
+               Click="SelectExercise5_Click"/>
+            <Button Name="Exe6Button" Content="managers with more than 3" Style="{StaticResource navigationButtonStyle}"  
+               Click="SelectExercise6_Click"/>
+            <Button Name="Exe7Button" Content="search" Style="{StaticResource navigationButtonStyle}"  
+               Click="SelectExercise7_Click"/>
         </StackPanel>
     </Grid>
 </Page>
