@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkeletonStudent", "SkeletonStudent\SkeletonStudent.csproj", "{C2645657-756D-49E5-BE50-DD927649B6D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkeletonStudent.Data", "SkeletonStudent.Data\SkeletonStudent.Data.csproj", "{659BE573-26C9-417E-80EE-DA0D9C0CF8B6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C2645657-756D-49E5-BE50-DD927649B6D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2645657-756D-49E5-BE50-DD927649B6D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2645657-756D-49E5-BE50-DD927649B6D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2645657-756D-49E5-BE50-DD927649B6D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{659BE573-26C9-417E-80EE-DA0D9C0CF8B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{659BE573-26C9-417E-80EE-DA0D9C0CF8B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{659BE573-26C9-417E-80EE-DA0D9C0CF8B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{659BE573-26C9-417E-80EE-DA0D9C0CF8B6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A12F81BE-911E-4F84-B9C1-7B440506F932}
+	EndGlobalSection
+EndGlobal

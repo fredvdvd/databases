@@ -1,0 +1,27 @@
+﻿<Page x:Class="SkeletonStudent.ExamplePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SkeletonStudent"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ExamplePage">
+
+    <Grid>
+        <Button Content="Load data from table" HorizontalAlignment="Left" Margin="10,389,0,0" VerticalAlignment="Top" Width="206" Click="Button_Click"/>
+        <DataGrid x:Name="TableDataGrid" ItemsSource="{Binding}" HorizontalAlignment="Left" Height="399" Margin="226,10,0,0" VerticalAlignment="Top" Width="556"/>
+        <Label Content="Table to load data from:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="TableCombobox" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="206" SelectedIndex="0">
+            <ComboBoxItem Content="Countries"/>
+            <ComboBoxItem Content="Departments"/>
+            <ComboBoxItem Content="Employees"/>
+            <ComboBoxItem Content="Jobs"/>
+            <ComboBoxItem Content="Job_Grades"/>
+            <ComboBoxItem Content="Job_History"/>
+            <ComboBoxItem Content="Locations"/>
+            <ComboBoxItem Content="Regions"/>
+        </ComboBox>
+
+    </Grid>
+</Page>

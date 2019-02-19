@@ -1,0 +1,17 @@
+C:\Users\20005781\source\repos\SkeletonStudent\SkeletonStudent.Data\bin\Debug\SkeletonStudent.Data.dll
+C:\Users\20005781\source\repos\SkeletonStudent\SkeletonStudent.Data\bin\Debug\SkeletonStudent.Data.pdb
+C:\Users\20005781\source\repos\SkeletonStudent\SkeletonStudent.Data\obj\Debug\SkeletonStudent.Data.csproj.CoreCompileInputs.cache
+C:\Users\20005781\source\repos\SkeletonStudent\SkeletonStudent.Data\obj\Debug\SkeletonStudent.Data.dll
+C:\Users\20005781\source\repos\SkeletonStudent\SkeletonStudent.Data\obj\Debug\SkeletonStudent.Data.pdb
+C:\Users\20005781\source\repos\SkeletonStudent\SkeletonStudent.Data\obj\Debug\SkeletonStudent.Data.csprojAssemblyReference.cache
+C:\Users\20005781\Documents\PXL\T4SS\Module_3_maarten\Oefeningen\test\NetSqlSkeleton\SkeletonStudent\SkeletonStudent.Data\bin\Debug\SkeletonStudent.Data.dll
+C:\Users\20005781\Documents\PXL\T4SS\Module_3_maarten\Oefeningen\test\NetSqlSkeleton\SkeletonStudent\SkeletonStudent.Data\bin\Debug\SkeletonStudent.Data.pdb
+C:\Users\20005781\Documents\PXL\T4SS\Module_3_maarten\Oefeningen\test\NetSqlSkeleton\SkeletonStudent\SkeletonStudent.Data\obj\Debug\SkeletonStudent.Data.csproj.CoreCompileInputs.cache
+C:\Users\20005781\Documents\PXL\T4SS\Module_3_maarten\Oefeningen\test\NetSqlSkeleton\SkeletonStudent\SkeletonStudent.Data\obj\Debug\SkeletonStudent.Data.dll
+C:\Users\20005781\Documents\PXL\T4SS\Module_3_maarten\Oefeningen\test\NetSqlSkeleton\SkeletonStudent\SkeletonStudent.Data\obj\Debug\SkeletonStudent.Data.pdb
+C:\Users\fredv\Downloads\opdrachten_mod3\opdracht1\Opdracht1_SkeletonStudent\SkeletonStudent\SkeletonStudent.Data\bin\Debug\SkeletonStudent.Data.dll
+C:\Users\fredv\Downloads\opdrachten_mod3\opdracht1\Opdracht1_SkeletonStudent\SkeletonStudent\SkeletonStudent.Data\bin\Debug\SkeletonStudent.Data.pdb
+C:\Users\fredv\Downloads\opdrachten_mod3\opdracht1\Opdracht1_SkeletonStudent\SkeletonStudent\SkeletonStudent.Data\obj\Debug\SkeletonStudent.Data.csprojAssemblyReference.cache
+C:\Users\fredv\Downloads\opdrachten_mod3\opdracht1\Opdracht1_SkeletonStudent\SkeletonStudent\SkeletonStudent.Data\obj\Debug\SkeletonStudent.Data.csproj.CoreCompileInputs.cache
+C:\Users\fredv\Downloads\opdrachten_mod3\opdracht1\Opdracht1_SkeletonStudent\SkeletonStudent\SkeletonStudent.Data\obj\Debug\SkeletonStudent.Data.dll
+C:\Users\fredv\Downloads\opdrachten_mod3\opdracht1\Opdracht1_SkeletonStudent\SkeletonStudent\SkeletonStudent.Data\obj\Debug\SkeletonStudent.Data.pdb
