@@ -12,7 +12,7 @@ namespace SkeletonStudent.Exercises
         public Exercise2()
         {
             InitializeComponent();
-            List<Exercise2Model> data = ExersisesQueries.Getdepartmentname();
+            List<Exercise2Model> data = ExercisesQueries.Getdepartmentname();
             exe2Datagrid.ItemsSource = data;
         }
     }

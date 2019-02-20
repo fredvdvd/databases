@@ -23,7 +23,7 @@ namespace SkeletonStudent.Exercises
         public Exercise6()
         {
             InitializeComponent();
-            List<Exercise6Model> data = ExersisesQueries.GetManagersWith3OrMore();
+            List<Exercise6Model> data = ExercisesQueries.GetManagersWith3OrMore();
             exe6Datagrid.ItemsSource = data;
         }
     }

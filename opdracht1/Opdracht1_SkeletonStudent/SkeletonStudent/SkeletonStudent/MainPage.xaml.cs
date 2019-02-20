@@ -68,11 +68,19 @@ namespace SkeletonStudent
             Window exercise6 = new Exercises.Exercise6();
             exercise6.Show();
         }
+
         private void SelectExercise7_Click(object sender, RoutedEventArgs e)
         {
             //Voorbeeld hoe een window te openen met een oefening erin
             Window exercise7 = new Exercises.Exercise7();
             exercise7.Show();
+        }
+
+        private void SelectExercise8_Click(object sender, RoutedEventArgs e)
+        {
+            //Voorbeeld hoe een window te openen met een oefening erin
+            Window exercise8 = new Exercises.Exercise8();
+            exercise8.Show();
         }
 
     }

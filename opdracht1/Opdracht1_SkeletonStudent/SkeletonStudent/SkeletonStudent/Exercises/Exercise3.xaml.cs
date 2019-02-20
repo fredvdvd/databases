@@ -23,7 +23,7 @@ namespace SkeletonStudent.Exercises
         public Exercise3()
         {
             InitializeComponent();
-            List<Exercise3Model> data = ExersisesQueries.GetJobMax10K();
+            List<Exercise3Model> data = ExercisesQueries.GetJobMax10K();
                 exe3Datagrid.ItemsSource = data;
         }
     }

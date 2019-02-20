@@ -110,3 +110,5 @@ C:\Users\fredv\Documents\databases\opdracht1\Opdracht1_SkeletonStudent\SkeletonS
 C:\Users\fredv\Documents\databases\opdracht1\Opdracht1_SkeletonStudent\SkeletonStudent\SkeletonStudent\obj\Debug\Exercises\Exercise5.baml
 C:\Users\fredv\Documents\databases\opdracht1\Opdracht1_SkeletonStudent\SkeletonStudent\SkeletonStudent\obj\Debug\Exercises\Exercise6.g.cs
 C:\Users\fredv\Documents\databases\opdracht1\Opdracht1_SkeletonStudent\SkeletonStudent\SkeletonStudent\obj\Debug\Exercises\Exercise6.baml
+C:\Users\fredv\Documents\databases\opdracht1\Opdracht1_SkeletonStudent\SkeletonStudent\SkeletonStudent\obj\Debug\Exercises\Exercise8.g.cs
+C:\Users\fredv\Documents\databases\opdracht1\Opdracht1_SkeletonStudent\SkeletonStudent\SkeletonStudent\obj\Debug\Exercises\Exercise8.baml

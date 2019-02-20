@@ -13,7 +13,7 @@ namespace SkeletonStudent.Exercises
         {
             InitializeComponent();
 
-            List<Exercise1Model> data = ExersisesQueries.getSalaryDiff();
+            List<Exercise1Model> data = ExercisesQueries.getSalaryDiff();
             exe1Datagrid.ItemsSource = data;
         }
     }

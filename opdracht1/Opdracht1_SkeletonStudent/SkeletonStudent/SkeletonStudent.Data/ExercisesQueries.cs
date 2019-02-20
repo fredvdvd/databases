@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SkeletonStudent.Data
 {
-    public class ExersisesQueries
+    public class ExercisesQueries
     {
         public static List<Exercise1Model> getSalaryDiff()
         {
@@ -168,5 +168,6 @@ namespace SkeletonStudent.Data
             connection.Close();
             return data;
         }
+        
     }
 }

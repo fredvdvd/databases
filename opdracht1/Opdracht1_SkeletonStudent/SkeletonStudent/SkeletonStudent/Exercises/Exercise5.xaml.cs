@@ -23,7 +23,7 @@ namespace SkeletonStudent.Exercises
         public Exercise5()
         {
             InitializeComponent();
-            List<Exercise5Model> data = ExersisesQueries.GetDepartmentHeadCount();
+            List<Exercise5Model> data = ExercisesQueries.GetDepartmentHeadCount();
             exe5Datagrid.ItemsSource = data;
         }
     }

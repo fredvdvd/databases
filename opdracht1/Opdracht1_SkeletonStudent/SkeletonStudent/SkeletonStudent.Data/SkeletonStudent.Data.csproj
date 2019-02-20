@@ -50,6 +50,8 @@
     <Compile Include="Exercise4Model.cs" />
     <Compile Include="Exercise5Model.cs" />
     <Compile Include="Exercise6Model.cs" />
+    <Compile Include="Exercise8Model.cs" />
+    <Compile Include="Exercise8queries.cs" />
     <Compile Include="ExercisesQueries.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

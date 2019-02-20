@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SkeletonStudent.Data
 {
-    public class EmployeeRepository
+    public class ExersisesQueries
     {
         public static IList<Employee> GetAllEmployees()
         {
@@ -31,15 +31,15 @@ namespace SkeletonStudent.Data
 
         public static IList<Employee> GetEmployeesByName(string nameToSearch)
         {
-            var employees = new List<Employee>();
+            List<Employee> employees = new List<Employee>();
 
             SqlConnection connection = CompanyDB.GetConnection();
             connection.Open();
             string query =
                 @"SELECT first_name, last_name, department_id, employee_id 
                 FROM Employees
-                WHERE first_name like @nameToSearch 
-                OR last_name like @nameToSearch";
+                WHERE first_name LIKE @nameToSearch 
+                OR last_name LIKE @nameToSearch";
 
             SqlCommand cmd = new SqlCommand(query, connection);
             cmd.Parameters.AddWithValue("@nameToSearch", "%" + nameToSearch + "%");
@@ -51,7 +51,7 @@ namespace SkeletonStudent.Data
                 empl.Load(reader);
                 employees.Add(empl);
             }
-
+            connection.Close();
             return employees;
         }
 

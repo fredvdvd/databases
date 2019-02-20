@@ -41,6 +41,8 @@
                Click="SelectExercise6_Click"/>
             <Button Name="Exe7Button" Content="search" Style="{StaticResource navigationButtonStyle}"  
                Click="SelectExercise7_Click"/>
+            <Button Name="Exe8Button" Content="Update" Style="{StaticResource navigationButtonStyle}"  
+               Click="SelectExercise8_Click"/>
         </StackPanel>
     </Grid>
 </Page>

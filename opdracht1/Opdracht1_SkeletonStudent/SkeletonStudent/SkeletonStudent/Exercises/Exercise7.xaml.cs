@@ -34,7 +34,7 @@ namespace SkeletonStudent.Exercises
             }
             else
             {
-                IList<Employee> data = EmployeeRepository.GetEmployeesByName(searchString);
+                IList<Employee> data = ExersisesQueries.GetEmployeesByName(searchString);
                 exe7Datagrid.ItemsSource = data;
             }
         }
