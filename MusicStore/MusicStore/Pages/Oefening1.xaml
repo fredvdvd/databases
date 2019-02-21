@@ -1,0 +1,25 @@
+﻿<Page x:Class="MusicStore.Pages.Oefening1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MusicStore.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Oefening1">
+
+    <Grid>
+        <DataGrid Name="oefening1grid" HorizontalAlignment="Left" AutoGenerateColumns="False"
+                  Height="327" Margin="-4,113,0,0" 
+                  VerticalAlignment="Top" 
+                  Width="794">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Title" Width="150" Binding="{Binding Path=Title}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Artist" Width="150" Binding="{Binding Path=Artist}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Price" Width="150" Binding="{Binding Path=Price}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <ComboBox Name="genreSelector" DisplayMemberPath="Name" HorizontalAlignment="Left" Height="30" Margin="10,28,0,0" VerticalAlignment="Top" Width="277" SelectionChanged="ComboBox_SelectionChanged"/>
+
+    </Grid>
+</Page>
