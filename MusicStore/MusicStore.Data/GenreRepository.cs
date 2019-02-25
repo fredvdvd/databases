@@ -36,6 +36,28 @@ namespace MusicStore.Data
         }
 
 
+        public static Genre GetGenreById(int GenreId)
+        {
+            Genre genre = new Genre();
+
+            SqlConnection connection = MusicStoreDB.GetConnection();
+            connection.Open();
+            string query = @"SELECT Name, Description 
+                            FROM Genre
+                            WHERE GenreId = @GenreId";
+            SqlCommand cmd = new SqlCommand(query, connection);
+            cmd.Parameters.AddWithValue("@GenreId", GenreId);
+            SqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                string Name = reader["Name"].ToString();
+                string Description = reader["Description"].ToString();
+                genre.Name = Name;
+                genre.Description = Description;
+            }
+            return genre;
+        }
+
 
 
     }

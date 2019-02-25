@@ -25,8 +25,34 @@ namespace MusicStore.Data
             {
                 nameOfArtist = (string)reader["Name"];
             }
+            reader.Close();
             connection.Close();
             return nameOfArtist;
+        }
+
+        public static List<Artist> GetAllArtists()
+        {
+            SqlConnection connection = MusicStoreDB.GetConnection();
+            connection.Open();
+            string query =
+                @"SELECT Name, ArtistId
+                FROM Artist";
+            SqlCommand cmd = new SqlCommand(query, connection);
+            SqlDataReader reader = cmd.ExecuteReader();
+            List<Artist> artistList = new List<Artist>();
+            while (reader.Read())
+            {
+                string artistName = (string)reader["Name"];
+                int artistId = Convert.ToInt32(reader["ArtistId"]);
+                artistList.Add(new Artist()
+                {
+                    ArtistId = artistId,
+                    Name = artistName
+                });
+            }
+            reader.Close();
+            connection.Close();
+            return artistList;
         }
     }
 }

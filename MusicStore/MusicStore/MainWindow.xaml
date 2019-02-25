@@ -20,8 +20,9 @@
         <StackPanel Grid.Column="0">
             
             <Button Name="oefening1" Content="oefening1" Style="{StaticResource navigationButtonStyle}" Click="Oefening1Button_Click" />
-            <Button Name="selectAlbumButton" Content="Button" Style="{StaticResource navigationButtonStyle}" Click="SelectAlbumButton_Click" />
-            <Button Name="selectAlbumzxButton" Content="Button" Style="{StaticResource navigationButtonStyle}" Click="SelectAlbumzxButton_Click" />
+            <Button Name="allAlbumsButton" Content="Show All Albums" Style="{StaticResource navigationButtonStyle}" Click="allAlbumsButton_Click" />
+            <Button Name="selectAlbumButton" Content="Select Album" Style="{StaticResource navigationButtonStyle}" Click="selectAlbumButton_Click" />
+            <Button Name="updateAlbumButton" Content="Update Album" Style="{StaticResource navigationButtonStyle}" Click="updateAlbumButton_Click" />
         </StackPanel>
     </Grid>
 </Page>

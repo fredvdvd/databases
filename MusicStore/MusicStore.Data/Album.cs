@@ -14,5 +14,6 @@ namespace MusicStore.Data
         public int ArtistId { get; set; }
         public double Price { get; set; }
         public string Title { get; set; }
+        public int GenreId { get; set; }
     }
 }

@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Serilog;
 
 namespace MusicStore
 {
@@ -23,6 +24,11 @@ namespace MusicStore
         public MainWindow()
         {
             InitializeComponent();
+            Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Debug()
+                .WriteTo.File("logs\\myapp.txt",
+                  rollingInterval: RollingInterval.Day)
+                  .CreateLogger();
         }
 
         private void Oefening1Button_Click(object sender, RoutedEventArgs e)
@@ -30,14 +36,19 @@ namespace MusicStore
             NavigationService.Navigate(new Pages.Oefening1());
         }
 
-        private void SelectAlbumButton_Click(object sender, RoutedEventArgs e)
+        private void allAlbumsButton_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new Pages.ShowAlbumsPage());
         }
 
-        private void SelectAlbumzxButton_Click(object sender, RoutedEventArgs e)
+        private void selectAlbumButton_Click(object sender, RoutedEventArgs e)
         {
+            NavigationService.Navigate(new Pages.SelectAlbumPage());
+        }
 
+        private void updateAlbumButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Pages.UpdateAlbumsPage());
         }
     }
 }
