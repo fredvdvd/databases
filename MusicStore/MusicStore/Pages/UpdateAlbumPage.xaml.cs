@@ -66,7 +66,7 @@ namespace MusicStore.Pages
             }
             else
             {
-                int id = IntputHandling();
+                int id = IntegerHandling(AlbumIdBox.Text);
                 if (IdInListCheck(id))
                 {
                     getAlbumButton.IsEnabled = true;
@@ -81,7 +81,8 @@ namespace MusicStore.Pages
 
         private void GetAlbumButton_Click_1(object sender, RoutedEventArgs e)
         {
-            int id = IntputHandling();
+            string idboxinput = AlbumIdBox.Text;
+            int id = IntegerHandling(idboxinput);
             Album selectedAlbum = new Album();
             selectedAlbum = AlbumRepository.GetAlbumById(id);
             GenreCombo.Text = GenreRepository.GetGenreById(selectedAlbum.GenreId).Name;
@@ -91,32 +92,26 @@ namespace MusicStore.Pages
             AlbumUrlBox.Text = selectedAlbum.AlbumArtUrl;
         }
 
-        private int IntputHandling()
-        {
-            try
-            {
-                int id = Convert.ToInt32(AlbumIdBox.Text);
-                return id;
-            }
-            catch (FormatException invalidInputExeption)
-            {
-                MessageBox.Show(invalidInputExeption.Message);
-                return 0;
-            }
-        }
-
         private void UpdateAlbumButton_Click(object sender, RoutedEventArgs e)
         {
             Album updatedAlbum = new Album();
             updatedAlbum = SetValues();
-            if (IdInListCheck(updatedAlbum.AlbumId))
+            if (updatedAlbum.GenreId != 0 && updatedAlbum.ArtistId != 0)
             {
-                //set
+                if (IdInListCheck(updatedAlbum.AlbumId))
+                {
+                    AlbumRepository.UpdateAlbum(updatedAlbum);
+                    MessageBox.Show("album updated");
+                }
+                else
+                {
+                    AlbumRepository.CreateAlbum(updatedAlbum);
+                    MessageBox.Show("new item created");
+                }
             }
             else
             {
-                AlbumRepository.CreateAlbum(updatedAlbum);
-                MessageBox.Show("new item created");
+                MessageBox.Show("please select a genre and an artist");
             }
         }
 
@@ -124,7 +119,7 @@ namespace MusicStore.Pages
         {
             Album setAlbum = new Album();
             setAlbum.Title = TitleBox.Text;
-            setAlbum.Price = Convert.ToDouble(PriceBox.Text);
+            setAlbum.Price = DoubleHandling(PriceBox.Text);
             if (AlbumUrlBox.Text == "")
             {
                 setAlbum.AlbumArtUrl = null;
@@ -135,7 +130,7 @@ namespace MusicStore.Pages
             }
             if (AlbumIdBox.Text != "")
             {
-                setAlbum.AlbumId = Convert.ToInt32(AlbumIdBox.Text);
+                setAlbum.AlbumId = IntegerHandling(AlbumIdBox.Text);
             }
 
             if (GenreCombo.SelectedValue != null)
@@ -149,6 +144,34 @@ namespace MusicStore.Pages
                 setAlbum.ArtistId = artist.ArtistId;  
             }
             return setAlbum;
+        }
+
+        private int IntegerHandling(string input)
+        {
+            try
+            {
+                int id = Convert.ToInt32(input);
+                return id;
+            }
+            catch (FormatException invalidInputExeption)
+            {
+                MessageBox.Show(invalidInputExeption.Message);
+                return 0;
+            }
+        }
+
+        private double DoubleHandling(string input)
+        {
+            try
+            {
+                double id = Convert.ToDouble(input);
+                return id;
+            }
+            catch (FormatException invalidInputExeption)
+            {
+                MessageBox.Show(invalidInputExeption.Message);
+                return 0.00;
+            }
         }
     }
 }

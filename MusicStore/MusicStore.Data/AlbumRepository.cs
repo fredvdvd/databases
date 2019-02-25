@@ -129,9 +129,15 @@ namespace MusicStore.Data
             SqlConnection connection = MusicStoreDB.GetConnection();
             connection.Open();
             string query =
-                @"INSERT INTO Album (GenreId, ArtistId, Title, Price, AlbumArtUrl)
-                VALUES (@genreId, @artistId, @title, @price, @albumArtUrl);";
+                @"UPDATE Album 
+                SET GenreId = @genreId, 
+                    ArtistId = @artistId,
+                    Title = @title,
+                    Price = @price,
+                    AlbumArtUrl = @albumArtUrl
+                WHERE AlbumId = @albumId;";
             SqlCommand cmd = new SqlCommand(query, connection);
+            cmd.Parameters.AddWithValue("@albumId", album.AlbumId);
             cmd.Parameters.AddWithValue("@genreId", album.GenreId);
             cmd.Parameters.AddWithValue("@artistId", album.ArtistId);
             cmd.Parameters.AddWithValue("@title", album.Title);
