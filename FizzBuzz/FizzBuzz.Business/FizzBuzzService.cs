@@ -12,15 +12,50 @@ namespace FizzBuzz.Business
 
         public string GenerateFizzBuzzText(int fizzFactor, int buzzFactor, int lastNumber)
         {
-            //TODO: correctly generate FizzBuzzText
-            //Tip: use an instance of 'StringBuilder' to build the FizzBuzz text with good performance
-            throw new NotImplementedException();
+            Validate(fizzFactor, buzzFactor, lastNumber);
+            StringBuilder stringBuilder = new StringBuilder();
+            for (int count = 1; count <= lastNumber; count++)
+            {
+                if (count % fizzFactor == 0 && count % buzzFactor == 0)
+                {
+                    stringBuilder.Append("FizzBuzz");
+                }
+                else if (count % fizzFactor == 0)
+                {
+                    stringBuilder.Append("Fizz");
+                }
+                else if (count % buzzFactor == 0)
+                {
+                    stringBuilder.Append("Buzz");
+                }
+                else
+                    stringBuilder.Append(count);
+                if(count<= lastNumber - 1)
+                {
+                    stringBuilder.Append(" ");
+                }
+            }
+            return stringBuilder.ToString();
         }
 
         public void Validate(int fizzFactor, int buzzFactor, int lastNumber)
         {
-            //TODO: throw FizzBuzzValidationException if input is invalid
-            throw new NotImplementedException();
+            if (fizzFactor > MaximumFactor || buzzFactor > MaximumFactor)
+            {
+                throw new FizzBuzzValidationException("Fizz or Buzz > Maximum");
+            }
+            else if (fizzFactor < MinimumFactor || buzzFactor < MinimumFactor)
+            {
+                throw new FizzBuzzValidationException("Fizz or Buzz < Minimum");
+            }
+            else if (lastNumber < MinimumLastNumber)
+            {
+                throw new FizzBuzzValidationException("lastnumber too small");
+            }
+            else if (lastNumber > MaximumLastNumber)
+            {
+                throw new FizzBuzzValidationException("lastnumber too big");
+            }
         }
     }
 }
