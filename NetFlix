@@ -65,5 +65,4 @@ SELECT
 FROM Film 
 JOIN KijkGedrag ON Film.Id = KijkGedrag.Id
 JOIN Programma ON Programma.Id = Film.Id
-WHERE (Programma.Titel='Pulp Fiction')
-;
+WHERE (Programma.Titel='Pulp Fiction');
